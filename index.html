@@ -243,7 +243,26 @@
     }
   </style>
 </head>
+<style>
+  .site-nav { background: #2D2A26; padding: 0; display: flex; justify-content: center; flex-wrap: wrap; }
+  .site-nav a { color: #D9CFC4; text-decoration: none; font-size: 0.82rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; padding: 14px 20px; display: inline-block; transition: color 0.15s; font-family: 'Source Sans 3', Georgia, serif; }
+  .site-nav a:hover, .site-nav a.active { color: #B89A7A; }
+  .cover-cta { background: #F2EDE6; border: 1px solid #D9CFC4; border-radius: 4px; padding: 14px 20px; margin-bottom: 32px; display: flex; align-items: center; justify-content: space-between; }
+  .cover-cta-text { font-size: 0.92rem; color: #6B6560; }
+  .cover-cta-link { font-size: 0.88rem; font-weight: 600; color: #8B6F5E; text-decoration: none; letter-spacing: 0.03em; white-space: nowrap; }
+  .cover-cta-link:hover { text-decoration: underline; }
+  .read-more-link { display: inline-block; margin-top: 10px; font-size: 0.88rem; font-weight: 600; color: #8B6F5E; text-decoration: none; letter-spacing: 0.03em; }
+  .read-more-link:hover { text-decoration: underline; }
+</style>
 <body>
+
+<nav class="site-nav">
+  <a href="cover.html">Cover Letter</a>
+  <a href="faith.html">Statement of Faith</a>
+  <a href="philosophy.html">Ministry Philosophy</a>
+  <a href="index.html" class="active">Resume</a>
+</nav>
+
 <div class="page">
 
   <!-- Header -->
@@ -262,6 +281,12 @@
 
   <div class="body">
 
+    <!-- Cover CTA -->
+    <div class="cover-cta">
+      <span class="cover-cta-text">Read our cover letter to the New Life Search Team</span>
+      <a class="cover-cta-link" href="cover.html">Read Cover Letter →</a>
+    </div>
+
     <!-- Family -->
     <div class="section">
       <div class="section-title">Family</div>
@@ -271,7 +296,8 @@
     <!-- Ministry Philosophy -->
     <div class="section">
       <div class="section-title">Ministry Philosophy</div>
-      <p class="philosophy">"I believe God places me in people's paths — and I use every gift He's given me to move them forward. My passion is activation: helping people identify what's next and actually take the step. I lead from conviction, with vision and strategy that come naturally, and I've spent 25 years building ministries, teams, and environments where people feel known and compelled to grow."</p>
+      <p class="philosophy">"Ministry is not a platform. It's a placement. I believe God places me in people's paths — and I use every gift He's given me to move them forward. My passion is activation: helping people identify what's next and actually take the step."</p>
+      <a class="read-more-link" href="philosophy.html">Read Full Ministry Philosophy →</a>
     </div>
 
     <!-- Ministry Experience -->
