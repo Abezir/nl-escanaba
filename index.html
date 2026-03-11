@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aaron & Jessica Broberg — Pastoral Profile</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Source+Sans+3:ital,wght@0,300;0,400;0,600;1,400&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --cream:     #F9F6F1;
+      --paper:     #FFFFFF;
+      --ink:       #2D2A26;
+      --subtext:   #6B6560;
+      --accent:    #8B6F5E;
+      --rule:      #D9CFC4;
+      --gold:      #B89A7A;
+      --light-bg:  #F2EDE6;
+    }
+
+    body {
+      background: var(--cream);
+      color: var(--ink);
+      font-family: 'Source Sans 3', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.7;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: 860px;
+      margin: 48px auto 80px;
+      background: var(--paper);
+      border-radius: 4px;
+      box-shadow: 0 2px 24px rgba(0,0,0,0.07);
+      overflow: hidden;
+    }
+
+    /* ── Header ── */
+    .header {
+      background: var(--light-bg);
+      padding: 48px 56px 40px;
+      display: flex;
+      gap: 40px;
+      align-items: flex-start;
+      border-bottom: 3px solid var(--gold);
+    }
+    .header-photo {
+      flex-shrink: 0;
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid var(--paper);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.12);
+    }
+    .header-text {
+      padding-top: 8px;
+    }
+    .header-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--ink);
+      line-height: 1.2;
+    }
+    .header-title {
+      font-size: 1.05rem;
+      color: var(--accent);
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      margin-top: 6px;
+    }
+    .header-meta {
+      margin-top: 14px;
+      font-size: 0.92rem;
+      color: var(--subtext);
+      line-height: 1.8;
+    }
+    .header-meta a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    .header-meta a:hover { text-decoration: underline; }
+
+    /* ── Body ── */
+    .body {
+      padding: 44px 56px 56px;
+    }
+
+    /* ── Section ── */
+    .section {
+      margin-bottom: 40px;
+    }
+    .section-title {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--accent);
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--rule);
+      padding-bottom: 8px;
+      margin-bottom: 18px;
+    }
+
+    /* ── Philosophy block ── */
+    .philosophy {
+      font-size: 1.05rem;
+      font-style: italic;
+      color: var(--subtext);
+      line-height: 1.85;
+    }
+
+    /* ── Experience ── */
+    .org {
+      margin-bottom: 26px;
+    }
+    .org-name {
+      font-family: 'Playfair Display', Georgia, serif;
+      font-size: 1.05rem;
+      font-weight: 600;
+      color: var(--ink);
+    }
+    .org-location {
+      font-size: 0.88rem;
+      color: var(--subtext);
+      margin-bottom: 8px;
+    }
+    .role {
+      margin-bottom: 12px;
+      padding-left: 14px;
+      border-left: 2px solid var(--rule);
+    }
+    .role-title {
+      font-weight: 600;
+      color: var(--ink);
+      font-size: 0.97rem;
+    }
+    .role-years {
+      font-size: 0.85rem;
+      color: var(--gold);
+      font-weight: 600;
+      margin-left: 8px;
+    }
+    .role ul {
+      margin-top: 6px;
+      padding-left: 18px;
+      font-size: 0.92rem;
+      color: var(--subtext);
+    }
+    .role ul li { margin-bottom: 3px; }
+
+    /* ── Two-column ── */
+    .two-col {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    /* ── Credentials list ── */
+    .cred-list {
+      list-style: none;
+      padding: 0;
+    }
+    .cred-list li {
+      padding: 6px 0;
+      border-bottom: 1px solid var(--rule);
+      font-size: 0.93rem;
+      color: var(--subtext);
+    }
+    .cred-list li:last-child { border-bottom: none; }
+    .cred-list .label {
+      font-weight: 600;
+      color: var(--ink);
+      display: block;
+    }
+
+    /* ── Jessica ── */
+    .jessica-block {
+      background: var(--light-bg);
+      border-radius: 4px;
+      padding: 24px 28px;
+      border-left: 4px solid var(--gold);
+    }
+    .jessica-block .jname {
+      font-family: 'Playfair Display', serif;
+      font-weight: 600;
+      font-size: 1.05rem;
+      color: var(--ink);
+      margin-bottom: 6px;
+    }
+    .jessica-block p {
+      font-size: 0.93rem;
+      color: var(--subtext);
+      line-height: 1.75;
+    }
+
+    /* ── Sermon ── */
+    .sermon-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--light-bg);
+      border: 1px solid var(--rule);
+      border-radius: 4px;
+      padding: 12px 20px;
+      text-decoration: none;
+      color: var(--ink);
+      font-size: 0.95rem;
+      transition: background 0.15s;
+    }
+    .sermon-link:hover { background: var(--rule); }
+    .sermon-icon { font-size: 1.2rem; }
+
+    /* ── References ── */
+    .ref-card {
+      padding: 14px 0;
+      border-bottom: 1px solid var(--rule);
+    }
+    .ref-card:last-child { border-bottom: none; }
+    .ref-name { font-weight: 600; color: var(--ink); }
+    .ref-title { font-size: 0.88rem; color: var(--subtext); }
+    .ref-contact { font-size: 0.88rem; color: var(--accent); margin-top: 4px; }
+
+    /* ── Footer ── */
+    .footer {
+      text-align: center;
+      padding: 20px;
+      background: var(--light-bg);
+      border-top: 1px solid var(--rule);
+      font-size: 0.82rem;
+      color: var(--subtext);
+      letter-spacing: 0.03em;
+    }
+
+    @media (max-width: 640px) {
+      .header { flex-direction: column; align-items: center; text-align: center; padding: 32px 24px 28px; }
+      .body { padding: 32px 24px 40px; }
+      .two-col { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+<div class="page">
+
+  <!-- Header -->
+  <div class="header">
+    <img class="header-photo" src="headshot.png" alt="Aaron and Jessica Broberg" />
+    <div class="header-text">
+      <div class="header-name">Aaron &amp; Jessica Broberg</div>
+      <div class="header-title">Pastoral Candidate — Lead Pastor</div>
+      <div class="header-meta">
+        Austin, Minnesota<br />
+        <a href="tel:5072190940">507-219-0940</a>&nbsp;&nbsp;·&nbsp;&nbsp;<a href="mailto:aaronbroberg@gmail.com">aaronbroberg@gmail.com</a><br />
+        Ordained Minister, Assemblies of God (2021)
+      </div>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- Family -->
+    <div class="section">
+      <div class="section-title">Family</div>
+      <p>Married 26 years &nbsp;·&nbsp; Three children: Jacob (22), Levi (20), Hannah (19)</p>
+    </div>
+
+    <!-- Ministry Philosophy -->
+    <div class="section">
+      <div class="section-title">Ministry Philosophy</div>
+      <p class="philosophy">"I believe God places me in people's paths — and I use every gift He's given me to move them forward. My passion is activation: helping people identify what's next and actually take the step. I lead from conviction, with vision and strategy that come naturally, and I've spent 25 years building ministries, teams, and environments where people feel known and compelled to grow."</p>
+    </div>
+
+    <!-- Ministry Experience -->
+    <div class="section">
+      <div class="section-title">Ministry Experience</div>
+
+      <div class="org">
+        <div class="org-name">Cornerstone Church</div>
+        <div class="org-location">Austin, Minnesota &nbsp;·&nbsp; 2007–Present (17 years)</div>
+
+        <div class="role">
+          <span class="role-title">Executive Pastor of Ministry</span><span class="role-years">2017–Present</span>
+          <ul>
+            <li>Led, managed, and administered all ministry at Cornerstone Church</li>
+            <li>Recruited, trained, and managed 200+ volunteers monthly across all ministry areas</li>
+            <li>Led large-scale church events, outreaches, and retreats — 100 to 1,200 in attendance</li>
+            <li>Organized and led multiple international missions trips</li>
+            <li>AG District Kids Camp lead team — 3–4 weeks of camp annually (2014–2018)</li>
+            <li>Graphic design, website development, social media, YouTube, live stream production</li>
+            <li>Proficient in ProPresenter, Mailchimp, and digital communications</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <span class="role-title">Next Gen Pastor</span><span class="role-years">2016–2017</span>
+          <ul><li>Led all next generation ministry (youth and kids)</li></ul>
+        </div>
+
+        <div class="role">
+          <span class="role-title">Kids Pastor</span><span class="role-years">2010–2016</span>
+          <ul>
+            <li>Led, managed, and administered all children's ministry</li>
+            <li>AG District Kids Camp lead team (2014–2018)</li>
+          </ul>
+        </div>
+
+        <div class="role">
+          <span class="role-title">Connections Pastor</span><span class="role-years">2007–2010</span>
+          <ul>
+            <li>Led, managed, and administered 200+ adults monthly in connections ministry</li>
+            <li>Led, managed, and administered 50+ Life Groups across all demographics</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-name">New Life Assembly of God</div>
+        <div class="org-location">Sparta, Wisconsin &nbsp;·&nbsp; 2005–2007</div>
+        <div class="role">
+          <span class="role-title">Youth &amp; Associate Pastor</span>
+          <ul>
+            <li>Led, managed, and administered all kids and youth ministry</li>
+            <li>Co-established the Youth Pastor Retreat for the Wisconsin–Northern Minnesota District (2006–2007)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-name">Hibbing First Assembly of God</div>
+        <div class="org-location">Hibbing, Minnesota &nbsp;·&nbsp; 2000–2005</div>
+        <div class="role">
+          <span class="role-title">Youth Pastor &amp; Kids Pastor</span>
+          <ul>
+            <li>Led, managed, and administered all kids and youth ministry</li>
+            <li>Head Counselor &amp; Camp Coordinator, AG District Camp (2002, 2003, 2004)</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="org">
+        <div class="org-name">Milaca Assembly of God</div>
+        <div class="org-location">Milaca, Minnesota &nbsp;·&nbsp; 1997–1999</div>
+        <div class="role">
+          <span class="role-title">Youth Pastor</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Preaching Style -->
+    <div class="section">
+      <div class="section-title">Preaching Style</div>
+      <p>Passionate and practical. Aaron preaches to move people — not just inform them. He connects Scripture to everyday life and calls people to something bigger than themselves. Naturally a preacher; skilled as a teacher.</p>
+    </div>
+
+    <!-- Education & Credentials -->
+    <div class="section">
+      <div class="two-col">
+        <div>
+          <div class="section-title">Education &amp; Credentials</div>
+          <ul class="cred-list">
+            <li><span class="label">Ordained Minister</span>Assemblies of God · 2021</li>
+            <li><span class="label">Licensed Minister</span>Assemblies of God · 2003</li>
+            <li><span class="label">Berean University</span>1999–2000</li>
+            <li><span class="label">North Central University</span>1992–1993</li>
+            <li><span class="label">DISC Profile</span>Influence / Dominance</li>
+          </ul>
+        </div>
+        <div>
+          <div class="section-title">Jessica Broberg</div>
+          <div class="jessica-block">
+            <div class="jname">Ministry Partner</div>
+            <p>B.A. Psychology, North Central University (1999). Deeply empathetic, fiercely hospitable, and genuinely relational — Jessica thrives in pastoral care and one-on-one connection. She leads quietly and effectively, with little need for public recognition.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Sermon -->
+    <div class="section">
+      <div class="section-title">Sermon</div>
+      <a class="sermon-link" href="https://youtu.be/StoOH0CYPzg" target="_blank" rel="noopener">
+        <span class="sermon-icon">▶</span>
+        <span><strong>Pete's Recipe</strong>&nbsp;&nbsp;·&nbsp;&nbsp;Aaron Broberg</span>
+      </a>
+    </div>
+
+    <!-- References -->
+    <div class="section">
+      <div class="section-title">References</div>
+      <div class="ref-card">
+        <div class="ref-name">David Simerson</div>
+        <div class="ref-title">Lead Pastor, Cornerstone Church — Austin, MN</div>
+        <div class="ref-contact">507-219-1485 &nbsp;·&nbsp; dave@cornerstoneaustin.org</div>
+      </div>
+      <div class="ref-card">
+        <div class="ref-name">Mark Dean</div>
+        <div class="ref-title">Minnesota District Superintendent, Assemblies of God</div>
+        <div class="ref-contact">612-332-2409 &nbsp;·&nbsp; mdean@mnaog.org</div>
+      </div>
+    </div>
+
+  </div><!-- /body -->
+
+  <div class="footer">Prepared March 2026 &nbsp;·&nbsp; Aaron &amp; Jessica Broberg &nbsp;·&nbsp; aaronbroberg@gmail.com</div>
+</div>
+</body>
+</html>
